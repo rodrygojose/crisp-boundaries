@@ -1,10 +1,8 @@
 
-%% setup
-% first cd to the directory containing this file, then run:
-%compile; % this will check to make sure everything is compiled properly; if it is not, will try to compile it
+%%
+% create a datasets file
 
-type = 'speedy'; % use this for fastest results
-
+datasets;
 %dataset = 'Aquarium-20';
 %dataset = 'Hotel_bruges-19';
 %dataset = 'Bousquet_car-16';
@@ -13,7 +11,13 @@ type = 'speedy'; % use this for fastest results
 %dataset = 'Street-10';
 %dataset = 'Street_soleil-15';
 %dataset = 'Tree-18';
-dataset = 'Yellowhouse-12';
+%dataset = 'Yellowhouse-12';
+
+%% setup
+% first cd to the directory containing this file, then run:
+%compile; % this will check to make sure everything is compiled properly; if it is not, will try to compile it
+
+type = 'speedy'; % use this for fastest results
 
 data_root   = 'D:/D_workspace/datasets/0_mixed_renderer_datasets';
 dataset_root= sprintf('%s/%s/IBR_data_VSFM-CMPMVS', data_root, dataset);

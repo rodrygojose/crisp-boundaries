@@ -1,0 +1,9 @@
+%dataset = 'Aquarium-20';
+%dataset = 'Hotel_bruges-19';
+%dataset = 'Bousquet_car-16';
+%dataset = 'Hotel_corner-10';
+%dataset = 'Parthenay_oldChurch-25';
+%dataset = 'Street-10';
+%dataset = 'Street_soleil-15';
+%dataset = 'Tree-18';
+%dataset = 'Yellowhouse-12';
