@@ -9,7 +9,7 @@
 
 %% setup
 % first cd to the directory containing this file, then run:
-compile; % this will check to make sure everything is compiled properly; if it is not, will try to compile it
+%compile; % this will check to make sure everything is compiled properly; if it is not, will try to compile it
 
 
 %% Detect boundaries
@@ -19,12 +19,16 @@ compile; % this will check to make sure everything is compiled properly; if it i
 type = 'speedy'; % use this for fastest results
 %type = 'accurate_low_res'; % use this for slightly slower but more accurate results
 %type = 'accurate_high_res'; % use this for slow, but high resolution results
+%type = 'accurate_multiscale';
 
-I = imread('../test_images/101027.jpg');
+ID = 0;
+dataset = 'D:\D_workspace\datasets\0_debuging\und_coffebreak\IBR_data_VSFM-CMPMVS';
+I = imread( sprintf('%s/half_size/%08d.jpg', dataset, ID) );
+
 [E,E_oriented] = findBoundaries(I,type);
 
-close all; subplot(121); imshow(I); subplot(122); imshow(1-mat2gray(E));
-
+%close all; subplot(121); imshow(I); subplot(122); imshow(1-mat2gray(E));
+figure; subplot(121); imshow(I); subplot(122); imshow(1-mat2gray(E));
 
 %% Segment image
 % builds an Ultrametric Contour Map from the detected boundaries (E_oriented)
